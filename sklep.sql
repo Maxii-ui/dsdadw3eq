@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 19 Mar 2020, 22:07
+-- Czas generowania: 27 Mar 2020, 23:43
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.4.1
 
@@ -35,6 +35,13 @@ CREATE TABLE `vmcs_logs` (
   `details` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `vmcs_logs`
+--
+
+INSERT INTO `vmcs_logs` (`id`, `user`, `section`, `details`, `date`) VALUES
+(1, 'Admin', 'Logowanie', '127.0.0.1', '1585348982');
 
 -- --------------------------------------------------------
 
@@ -131,6 +138,13 @@ CREATE TABLE `vmcs_users` (
   `lastLogin` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `vmcs_users`
+--
+
+INSERT INTO `vmcs_users` (`id`, `name`, `password`, `avatar`, `lastIP`, `lastLogin`) VALUES
+(1, 'Admin', '$2y$10$n00dIWZTbv3riL7WxyDP3eRcGetzGo4ibK3swZ71hcw/J45.RM4vq', NULL, '127.0.0.1', '1585348982');
+
 -- --------------------------------------------------------
 
 --
@@ -205,7 +219,7 @@ ALTER TABLE `vmcs_vouchers`
 -- AUTO_INCREMENT dla tabeli `vmcs_logs`
 --
 ALTER TABLE `vmcs_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `vmcs_news`
@@ -241,7 +255,7 @@ ALTER TABLE `vmcs_services`
 -- AUTO_INCREMENT dla tabeli `vmcs_users`
 --
 ALTER TABLE `vmcs_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `vmcs_vouchers`
